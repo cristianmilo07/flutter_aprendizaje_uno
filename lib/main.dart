@@ -1,7 +1,6 @@
+import 'package:aprendizaje/aprendizaje_trips.dart';
 import 'package:flutter/material.dart';
-import 'description_place.dart';
-import 'review_list.dart';
-import 'gradient_back.dart';
+import 'aprendizaje_trips.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,8 +14,6 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    String descriptionDummy = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
-    //String descriptionDummy = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it ";
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -31,23 +28,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-        home: Scaffold(
-          appBar: AppBar(
-            title: Text("Hola Mundo Feliz"),
-          ),
-          //body: new DescriptionPlace("Bahamas", 4, descriptionDummy),
-          body: Stack(
-            children: <Widget>[
-              ListView(
-                children: <Widget> [
-                  DescriptionPlace("Colombia", 4, descriptionDummy),
-                  ReviewList()
-                ],
-              ),
-              GradientBack()
-            ],
-          )
-        )//MyHomePage(title: 'Flutter Demo Home Page'),
+        home: AprendizajeTrips()//MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
