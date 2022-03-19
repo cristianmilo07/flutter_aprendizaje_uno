@@ -1,3 +1,4 @@
+import 'package:aprendizaje/header_appbar.dart';
 import 'package:flutter/material.dart';
 import 'description_place.dart';
 import 'review_list.dart';
@@ -32,9 +33,6 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
         home: Scaffold(
-          appBar: AppBar(
-            title: Text("Hola Mundo Feliz"),
-          ),
           //body: new DescriptionPlace("Bahamas", 4, descriptionDummy),
           body: Stack(
             children: <Widget>[
@@ -44,7 +42,7 @@ class MyApp extends StatelessWidget {
                   ReviewList()
                 ],
               ),
-              GradientBack('Popular')
+              HeaderAppBar()
             ],
           )
         )//MyHomePage(title: 'Flutter Demo Home Page'),
